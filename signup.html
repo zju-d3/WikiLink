@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to B-Link !</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="shortcut icon" href="static/favicon.png">
+    <link rel="stylesheet" type="text/css" href="static/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var isIE = /*@cc_on!@*/false || !!document.documentMode;
+        if (isIE){
+            alert("Sorry, Internet Explorer cannot perfectly support our website;\n\nFor best experience, please use other browsers like Chrome or Safari.");
+        }
+    </script>
+</head>
+
+<body>
+
+<noscript>
+  <style type="text/css">
+        .js-check {display:none;}
+  </style>
+  <div class="w3-container w3-center">
+      <h1 class="w3-jumbo">JavaScript Is Not Enabled</h1>
+      <br>
+      <img src="static/warning.png" alt="Warning: " style="height:100px;">
+      <div class=" w3-large" style="display:inline-block;height:100px;vertical-align:middle;padding-left:30px;">
+          You need to have JavaSript enabled in your browser to utilise the full functionality of this website.</div>
+  </div>
+</noscript>
+
+    <div class="w3-hide-small js-check" style="height:100px;"></div>
+
+    <div class="w3-center" style="margin-top:40px;">
+        <img src="static/logo.png" style="height:50px;" class=""/>
+        <br>
+        <img src="static/blink.png" alt="B-Link" style="height:70px;margin-top:40px;">
+        <h6><i>A Data-driven Creativity Engine</i></h6>
+    </div>
+
+    <div class="w3-hide-small" style="height:50px;"></div>
+    <p class="w3-center w3-small" ><ins style="cursor:pointer;" onclick="privacy()">Terms & Conditions</ins></p>
+    <div class="w3-center" style="height:128px;;">
+        <form action="/signup" class="" style="">
+            <input type="email" name="email" value="" class="w3-input" style="width:260px;;display:inline-block;"
+                   placeholder="    Please type in your EMAIL" id="email" autocomplete="on" required>
+            <br>
+            <input type="hidden" name="w" id="width" value="" class="w3-input">
+            <button type="submit" id="submit" class="w3-btn w3-large w3-blue" style="margin-top:50px; width:150px;">Enter</button>
+        </form>
+    </div>
+
+    <script>
+        function privacy() {
+            alert ("Privacy Policy and Terms:\n\n "+
+            "1. Your email address will be used for counting access times only;\n"+
+            " 2. All the information you give in B-Link will be used for its research only and kept securely;\n"+
+            " 3. Your consent to participant in the feedback survey will be implied by submitting the online questionnaire;\n\n"+
+			"Thanks for using B-Link !");
+        }
+
+        d3.select('#submit').on('click',function(){
+            if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1){
+                var email = document.getElementById('email');
+                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                if (!filter.test(email.value)) {
+                    alert('Please type in valid email address !');
+                    email.focus;
+                    d3.event.preventDefault();
+                }
+            }
+        });
+
+    </script>
+
+    <script>
+
+    var w=window.innerWidth || document.body.clientWidth;
+    d3.select('input[name="w"]').attr('value',w);
+
+    </script>
+
+</body>
+</html>

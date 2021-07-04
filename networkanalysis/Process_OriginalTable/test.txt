@@ -1,0 +1,37 @@
+>>> G[1][2]
+Fw:1.24
+Nw: 0.69
+FNw: 0.9678
+dis: 0.41
+
+>>> G[1][3]
+Fw:0.69
+Nw:0.90
+FNw:0.7945
+dis:0.29
+
+>>> G[1][2]
+{'Forward': 1.39, 'Backward': 1.1, 'weight': 1.0}
+>>> G[2][1]
+{'Forward': 1.1, 'Backward': 1.39, 'weight': 1.0}
+
+>>> G[1][3]
+{'Forward': 0.29, 'Backward': 1.1, 'weight': 3.0}
+>>> G[3][1]
+{'Forward': 1.1, 'Backward': 0.29, 'weight': 3.0}
+
+
+
+For abcdeijm_test.all_w2w:
+>>> G[4][31]
+{'FNw': 6.81, 'Fw': 6.58, 'Nw': 7.05, 'weight': 2.0, 'dis': 0.03}
+
+G2S: 31-4
+
+Forward: 5.53
+Backward: 7.62
+
+
+>>> T2L,T2P=nx.single_source_dijkstra(G,188566,cutoff=6.0,weight='Fw')
+>>> sorted(T2L.items(),key=lambda x:x[1])[:10]
+[(188566, 0), (69830, 3.1), (174114, 3.63), (175203, 3.73), (621443, 3.76), (248068, 3.77), (119075, 3.81), (71179, 3.84), (120691, 4.02), (737001, 4.03)]

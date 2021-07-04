@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback: B-Link </title>
+  <link rel="shortcut icon" href="static/favicon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="static/feedback.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/w3.css">
+  <link rel="stylesheet" type="text/css" href="static/feedback.css">
+
+  <body>
+    <header class="w3-container w3-blue">
+      <h1> Feedback on B-Link</h1>
+    </header>
+
+    <div id="form-border" class="" style="">
+
+      <form id="form-padding" class="w3-container w3-card-4 form-max" action="/feedback-3" method="POST">
+
+        <h3>Part II : Human-Computer Interaction</h3>
+
+        <p>
+          <label class="w3-label">1. Is it easy for you to understand how to use our website service?</label>
+          <div class="fb2-rating" style="display:table;">
+              <span class="rating-span w3-center" style="color:#8600b3;padding-right:10px;">Difficult</span>
+              <div class="rating-len">
+                  <input name="HCI1" value="" style="display:none;" required>
+                  <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                      <circle class="HCI1" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                      <circle class="HCI1" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                      <circle class="HCI1" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                      <circle class="HCI1" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                      <circle class="HCI1" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                  </svg>
+              </div>
+              <span class="rating-span w3-center" style="color:#4CAF50;padding-left:10px;">Easy</span>
+          </div>
+        </p>
+
+        <p>
+          <label class="w3-label">2. Do you have difficulty of finding the right button to proceed?</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="HCI2" value="no" required><label>Absolutely no</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="HCI2" value="occasion-solve"><label>Occasionally but solved</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="HCI2" value="occasion-skip"><label>Occasionally but not solved</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="HCI2" value="yes-abandon"><label>Yes, and gave up further use</label>
+        </p>
+
+        <p>
+          <label class="w3-label">3. Is our website service fully compatible with your device and browser?</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="HCI3" value="yes" required><label>Yes</label><br>
+          <input id="HCI3_other" class="w3-radio w3-margin-right" type="radio" name="HCI3" value="no"><label>No, there are problems</label>
+          <input id="HCI3_input" class="w3-input" type="text" name="HCI3-t" placeholder="Please describe in details" style="display:none;">
+        </p>
+
+        <p>
+          <label class="w3-label">4. Did you try clicking nodes in the network map instead of typing in the search-box?</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="HCI4" value="yes" required><label>Yes</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="HCI4" value="no"><label>No</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="HCI4" value="unaware"><label>I don't understand</label>
+        </p>
+
+        <p>
+          <label class="w3-label">5. Compared with traditional search, how do you think the network search?</label><br>
+          <div class="fb2-rating" style="display:table;">
+              <span class="rating-span w3-center" style="color:#8600b3;padding-right:10px;">Poor</span>
+              <div class="rating-len">
+                  <input name="HCI5" value="" style="display:none;" required>
+                  <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                      <circle class="HCI5" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                      <circle class="HCI5" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                      <circle class="HCI5" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                      <circle class="HCI5" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                      <circle class="HCI5" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                  </svg>
+              </div>
+              <span class="rating-span w3-center" style="color:#4CAF50;padding-left:10px;">Excellent</span>
+          </div>
+        </p>
+
+        <p class="page-button" style="margin:30px 0 20px 0;">
+            <input type="hidden" id="submit_count" value='0' name="submit_count">
+            <button type="submit" class="w3-btn w3-blue w3-large" >Save & Next</button>
+        </p>
+
+      <script>
+            $('button[type="submit"]').on('click',function(){
+                var required = $('[required]');
+                var error = false;
+                for(var i = 0; i <= (required.length - 1);i++)
+                {
+                    if(required[i].value == '') // tests that each required value does not equal blank, you could put in more stringent checks here if you wish.
+                    {
+                        error = true; // if any inputs fail validation then the error variable will be set to true;
+                    }
+                };
+                if(error) // if error is true;
+                {
+                    alert('Please answer all rating questions !')
+                    return false;  // stop the form from being submitted.
+                }
+                else {
+                    submit_count = parseInt($("#submit_count").attr('value'), 10);
+                    console.log(submit_count)
+                    submit_count = submit_count + 1;
+                    console.log(submit_count)
+                    $('#submit_count').attr('value',submit_count);
+                }
+            });
+      </script>
+
+      </form>
+
+    </div>
+  </body>
+</html>

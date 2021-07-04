@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to B-Link !</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="static/favicon.png">
+    <link rel="stylesheet" type="text/css" href="static/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    h1 {padding:40px 15px;margin:0;}
+    .banner {margin-top:50px;}
+    .logo {height:60px;}
+    .blink {height:60px; margin-left:80px;}
+    .contact {margin:40px 0 20px 0;}
+    .mail {text-decoration:none;font-weight:bold;}
+    span{font-size:18px;}
+
+    @media only screen and (max-width: 760px) {
+        .blank{display:none;}
+        h1 {font-size:1.5em;}
+        .logo {height:50px;position:absolute;left:50%;margin-left:-62.5px;display:block;}
+        .blink {height:50px;margin:65px 0 0px 0;}
+        .contact{height:16px;}
+        span{display:block;}
+    }
+    @media only screen and (max-width: 350px) {
+        h1 {padding:20px 15px;}
+        .banner {margin-top:40px;}
+        .logo {height:50px;}
+        .contact{margin:30px 0 20px 0;}
+        span {font-size:16px;}
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="blank" style="height:80px;"></div>
+
+    <div class="w3-center w3-blue" style="">
+        <h1>Thanks for trying B-Link, let's keep in touch!</h1>
+    </div>
+
+    <div class="w3-center banner" >
+        <img src="static/logo.png" class="w3-white logo"/>
+        <img src="static/blink.png" alt="B-Link" class="blink"><br><br>
+        <span>Linking your brain </span><span>knowledge within just a blink !</span>
+    </div>
+
+    <div class="w3-hide-small" style="height:50px;"></div>
+
+    <div class="w3-center" style="height:100px;">
+        <div class="contact"><a href="mailto: p.childs@imperial.ac.uk; lc2015@ic.ac.uk; shi.feng.nwpu@gmail.com" class="w3-text-blue mail">Contact us</a></div>
+        <a href="/" value="#"><button class="w3-btn w3-large w3-blue" >Go back to B-Link</button></a>
+    </div>
+
+</body>
+</html>

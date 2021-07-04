@@ -1,0 +1,354 @@
+svg#Mainback {
+      top:0; bottom:0; left:0; right:0;
+}
+
+html, body { margin:0; padding:0; overflow:hidden }
+
+/* search box design  */
+#mainSearchBox {
+  position:fixed;
+  left:10px;
+  top:10px;
+}
+
+input[name="keywords"]{
+  width: 350px;
+  height:50px;
+  box-sizing:border-box;
+  border:2px solid #ccc;
+  border-radius:10px;
+  font-size: 20px;
+  padding:12px 70px 12px 12px;
+}
+
+input[name="search"]{
+  width:40px;
+  height:40px;
+  position:absolute;
+  right:5px;
+  top:5px;
+  border:2px;
+  background-image:url('/static/search.png');
+  background-color:white;
+  background-size:100%;
+  opacity:0.1;
+  cursor: pointer;
+}
+
+/*input[name="clear"]{
+  width:20px;
+  height:20px;
+  position:absolute;
+  right:50px;
+  top:15px;
+  border:2px;
+  background-color:white;
+  background-image:url('/static/clear.png');
+  opacity:0.4;
+  background-size:100%;
+  cursor:pointer;
+  visibility:hidden;
+}*/
+
+input[name="search"]:hover{
+  background-size:110%;
+}
+
+.feedback{
+    position:fixed;
+    top:10px;
+    right:10px;
+    width:85px;
+    height:50px;
+    cursor:pointer;
+    background-color:#4daaf6;
+}
+
+div.header{
+   position: fixed;
+   left:350px;
+   top:5px;
+   right:200px;
+   height:50px;
+   font-size:45px;
+   font-family:cursive;
+   pointer-events:none;
+}
+
+/* tooltip design for func-nav panel */
+.tooltip .tip-style{
+    visibility:hidden;
+    width:350px;
+    position:fixed;
+    left:10px;
+    top:143px;
+    white-space:normal;
+    padding:5px 20px;
+    font-size:14px;
+    color:red;
+    background-color:white;
+    text-align:left;
+}
+
+.tooltip:hover .tip-style{
+    visibility:visible;
+    -webkit-transition-delay: 1s; /* Chrome and Safari */
+    transition-delay: 1s;
+}
+
+/* the whole panel control  */
+.panel{
+  position:fixed;
+  left:10px;
+  width:350px;
+  display:none;
+}
+
+/* the drawing of toggle switch */
+
+.t-global {
+    font-family:arial;
+    font-size:20px;
+    color:#2196F3;
+    font-weight: bold;
+    display:inline-block;
+}
+
+.t-global-toggle{
+    color:black;
+    font-weight:normal;
+}
+
+.t-local {
+    font-family:arial;
+    font-size:20px;
+    font-weight:normal;
+    display:inline-block;
+}
+
+.t-local-toggle{
+    color:#2196F3;
+    font-weight:bold;
+}
+
+
+label.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 100px;
+}
+
+label.switch-cluster {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 34px;
+}
+
+label.switch input {display:none;}
+label.switch-cluster input {display:none;}
+
+div.slider, .slider-cluster {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+}
+
+div.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  top: 4px;
+  background-color: white;
+}
+
+input[name="switch-1"]:checked + .slider {
+  background-color: #2196F3;
+}
+
+input[name="switch-2"]:checked + .slider {
+  background-color: #2196F3;
+}
+
+input[name="switch-3"]:checked + .slider {
+  background-color: #2196F3;
+}
+
+input[name="switch-1"]:checked + .slider:before {
+  transform: translateY(66px);
+}
+
+input[name="switch-2"]:checked + .slider:before {
+  transform: translateX(66px);
+}
+
+input[name="switch-3"]:checked + .slider:before {
+  transform: translateX(66px);
+}
+
+/* Rounded sliders */
+div.slider.round {
+  border-radius: 34px;
+}
+
+div.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Min Hop Panel  */
+select.minhop{
+    width:80px;
+    height:30px;
+    font-size:20px;
+    padding-left:26px;
+}
+
+/* Line-panel text input box */
+input[name="endpoint"]{
+  width: 350px;
+  height:50px;
+  box-sizing:border-box;
+  border:2px solid #ccc;
+  border-radius:10px;
+  font-size: 20px;
+  padding:12px 70px 12px 12px;
+}
+
+/* cluster-panel search-icon */
+.cluster-searchicon{
+  opacity:0.3;
+  cursor:pointer;
+}
+
+.listTxt{
+    height: 35px;
+}
+
+/* cluster-panel text blink animation */
+.blink_text{
+    animation:1s blinker linear 10;
+    -webkit-animation:1s blinker linear 10;
+
+}
+
+@keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+}
+
+/* info display panel */
+#info_panel{
+    position:fixed;
+    left:10px;
+    bottom:0px;
+    width:350px;
+    display:none;
+}
+
+.info-display{
+    background-color:white;
+    border:1px solid black;
+    border-radius:2px;
+    position:absolute;
+    top:10px;
+    left:14px;
+    bottom:60px;
+    width:320px;
+    overflow-y:scroll;
+    word-wrap:break-word;
+}
+
+#pleasewait{
+    top: 60% ;
+    left: 25% ;
+    position: absolute;
+    display: block;
+}
+
+div.row p.list{
+    width: 10%;
+    float: left;
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+div.row p.infoHead{
+    width: 90%;
+    float: left;
+    margin: 0;
+    font-size: 14px;
+    font-family:arial;
+    text-align: left;
+    /*line-height: 150%;*/
+}
+
+
+div.row p.infoDetail{
+    width: 90%;
+    clear: left;
+    float: right;
+    margin: 0;
+    font-size: 12px;
+    color : #839192;
+    font-family:arial;
+    text-align: left;
+    padding-top:5px;
+    /*line-height: 150%;*/
+}
+
+div.info-display div.row{
+    padding-top:10px;
+    padding-left:2px;
+    padding-bottom:10px;
+    clear: both;
+    border-bottom:2px solid #9ed1fa;
+    cursor:pointer;
+}
+
+.info-display .row.clicked{
+    border:2px solid #9ed1fa;
+    box-shadow:0px 2px 10px 0 #86c5f9,0px 2px 20px 0 #86c5f9;
+}
+
+/*.info-display .row:hover{
+    border:2px solid #9ed1fa;
+    box-shadow:0px 2px 10px 0 #86c5f9,0px 2px 20px 0 #86c5f9;
+
+}*/
+
+div.info-display div.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.page-button{
+    position:absolute;
+    bottom:15px;
+    left:16px;
+    width:316px;
+}
+
+/* copy right declaration */
+.copyright{
+    position:absolute;
+    bottom:0px;
+    left:50%;
+    width:300;
+    margin-left:-150px;
+    height:26px;
+    pointer-events:none;
+}
+
+
+
+
