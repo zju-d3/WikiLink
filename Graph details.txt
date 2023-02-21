@@ -1,0 +1,116 @@
+----------------------abcdeijm_test raw graph:--------------------------------------
+undirected(abcdeijm_test).gpickle:
+{type: undirected
+process: calculate weights
+edges: 19507363
+nodes: 2207960}
+
+1. global edge filter minedges=2.0; node degree filter, mindegree=1.0
+undirected(abcdeijm_test)MinE2_MinN1_Lp70_Sp30.gpickle:
+{type: Undirected
+process: filter edges based on min original weight --> filter nodes based on min node degree --> calculate weights
+edges: 2285955
+nodes: 365034}
+
+
+---------------------- total_v3_csvneo4j raw Graph: When node degree<=1, alpha=1.0 !!! --------------------------------------
+edges:  29991894
+nodes:  3157377 
+
+1. add alpha:
+NaNRawGraphWithDisparityAlpha_undirected_total_v3_csvneo4j.gpickle
+{type: undirected
+process: add alpha value
+edges:  29991894
+nodes:  3157377 }
+
+2. filter edges and nodes
+(1) disparity edge filter alpha=0.65, node degree filter, mindegree=1.0
+NaNfilteredG_undirected_alpha0.65_nodeD1.0_total_v3_csvneo4j.gpickle
+{
+type: undirected
+process: add alpha value --> filter edges based on alpha -->filter nodes based on degree
+edges:  3749125
+nodes:  566592
+}
+(2) disparity edge filter alpha=0.6, node degree filter, mindegree=1.0
+NaNfilteredG_undirected_alpha0.6_nodeD1.0_total_v3_csvneo4j.gpickle
+{
+type: undirected
+process: add alpha value --> filter edges based on alpha -->filter nodes based on degree
+edges:  13378377
+nodes:  2070515
+}
+
+3. add node degree and edge distance
+(1). add G, SP and R
+NaNaddNodeEdgeDegree_G+SP+R_undirected_alpha0.65_nodeD1.0_total_v3_csvneo4j.gpickle
+{
+type: undirected
+process: add alpha value-->filter edges on alpha0.65 -->filter nodes mindegree1.0 --> add node degree/edge distance 'G','SP','R'
+edges: 3749125
+nodes: 566592
+}
+
+
+
+---------------------- total_v3_csvneo4j raw Graph: When node degree<=1, alpha=0.0 !!! --------------------------------------
+edges:  29991894
+nodes:  3157377
+
+1. add alpha:
+RawGraphWithDisparityAlpha_undirected_total_v3_csvneo4j.gpickle
+{type: undirected
+process: add alpha value
+edges:  29991894
+nodes:  3157377 }
+
+2. filter edges and nodes
+(1) disparity edge filter alpha=0.65, node degree filter, mindegree=1.0
+filteredG_undirected_alpha0.65_nodeD1.0_total_v3_csvneo4j.gpickle
+{
+type: undirected
+process: add alpha value --> filter edges based on alpha -->filter nodes based on degree
+edges:  3726904
+nodes:  536507
+}
+(2) disparity edge filter alpha=0.7, node degree filter, mindegree=1.0
+filteredG_undirected_alpha0.7_nodeD1.0_total_v3_csvneo4j.gpickle
+{
+type: undirected
+process: add alpha value --> filter edges based on alpha -->filter nodes based on degree
+edges:  3585173
+nodes:  535590
+}
+
+3. add node degree and edge distance
+(1). add G, SP and R
+addNodeEdgeDegree_G+SP+R_undirected_alpha0.65_nodeD1.0_total_v3_csvneo4j.gpickle
+{
+type: undirected
+process: add alpha value-->filter edges on alpha0.65 -->filter nodes mindegree1.0 --> add node degree/edge distance 'G','SP','R'
+edges:  3726904
+nodes:  536507
+}
+(2). add G, SP and R
+addNodeEdgeDegree_G+SP+R_undirected_alpha0.7_nodeD1.0_total_v3_csvneo4j.gpickle
+{
+type: undirected
+process: add alpha value-->filter edges on alpha0.7 -->filter nodes mindegree1.0 --> add node degree/edge distance 'G','SP','R'
+edges:  3585173
+nodes:  535590
+}
+(3). add R;r,n;GM,HM
+addNodeEdgeDegree_R+rn+GMHM_undirected_alpha0.65_nodeD1.0_total_v3_csvneo4j.gpickle
+{
+type: undirected
+process: add alpha value-->filter edges on alpha0.65 -->filter nodes mindegree1.0 --> add node degree/edge distance 'R';'r','n';'GM','HM'
+edges:  3726904
+nodes:  536507
+}
+
+
+
+
+
+

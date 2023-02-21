@@ -1,0 +1,89 @@
+
+body, header{
+    width:100%;
+}
+
+h1{padding-left:34px;}
+
+p, .p-fb3{
+    width:95%;
+    font-size:16px;
+}
+
+.p-fb3{
+    margin:16px 0;
+}
+
+#form-border{
+    margin:16px 0;
+    padding:0 50px;
+}
+
+#form-padding{
+    max-width:750px;
+}
+
+input[type='text'], select{
+    margin-left:20px;
+    width:70% !important;
+}
+
+input[type='checkbox'], input[type='radio']{
+    margin:0 10px 0 20px;
+}
+
+/* -------- Rating framework design -----------*/
+.fb2-rating{
+    margin:0 100px;
+}
+
+.rating-layout{
+    width:100%;
+    text-align:center;
+}
+
+.q-title{
+    padding:10px 0;
+    font-size:18px;
+}
+.tFront{
+    border-bottom:2px solid #2196F3;
+}
+
+.rating-len{
+    width:180px;
+}
+
+.rating-span{
+    font-family:Arial,sans-serif;
+    display:table-cell;
+    vertical-align:middle;
+    font-weight:bold;
+}
+/* ---------- Rating framework design -------------*/
+
+
+/* ---------- Mobile design only --------------- */
+@media only screen and (max-width: 760px) {
+    h1 {font-size:1.5em;padding-left:0;}
+    h3 {font-size:1.12em;}
+    #form-border {padding:0 10px;margin-top:8px;}
+    #form-padding {padding:0 8px;}
+    p, .p-fb3{margin:8px 0;width:100%;font-size:14px;}
+    input[type='text'], select{width:90% !important;}
+    .rating-span{font-size:12px;width:70px;padding:0 8px !important;}
+    .rating-len{height:38px;}
+    .q-title{font-size:15px;padding:8px 0;}
+    .fb2-rating{margin:0 20px;}
+    .page-button{text-align:center;}
+ }
+
+/* ---------- Iphone-5 design only -------------*/
+@media only screen and (max-width: 350px) {
+    .fb2-rating{margin:0;}
+    .rating-len{height:31px;width:160px;}
+    .rating-span{font-size:12px;width:68px;padding:0 !important;}
+    .rsl-iphone5{padding-right:5px;}
+    .rsr-iphone5{padding-left:5px;}
+    .fixI5-fb22{position:relative;left:-6px;}
+}

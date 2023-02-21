@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback: WikiLink </title>
+  <link rel="shortcut icon" href="static/favicon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="static/feedback.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/w3.css">
+  <link rel="stylesheet" type="text/css" href="static/feedback.css">
+
+  <body>
+    <header class="w3-container w3-blue">
+      <h1> Feedback on WikiLink</h1>
+    </header>
+
+    <div id="form-border" class="" style="">
+
+      <form id="form-padding" class="w3-container w3-card-4 form-max" action="/feedback-submit" method="POST">
+
+        <h3>Part III : Functionality Evaluation</h3>
+
+        <div id="fb3-q1" class="p-fb3">
+          <label class="w3-label w3-text-black">1. According to your search results, please evaluate the following pairs of words in term of their relevance and interestingness.</label>
+          <div class="rating-layout">
+              <div class="w3-text-blue q-title"><span class="tFront">(1). <span id="explore0">{{ explore[0] }}</span></span></div>
+              <div style="display:inline-block;">
+                  <div style="display:table;">
+                      <span class="rating-span" style="color:#8600b3;padding-right:10px;">Not relevant</span>
+                      <div class="rating-len" style="">
+                          <input name="FE1-11" value="" style="display:none;" required>
+                          <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                              <circle class="FE1-11" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-11" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-11" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-11" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-11" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                          </svg>
+                      </div>
+                      <span class="rating-span" style="color:#4CAF50;padding:0 33px 0 10px;">Relevant</span>
+                  </div>
+              </div>
+              <div style="display:inline-block;">
+                  <div style="display:table;">
+                      <span class="rating-span rsl-iphone5" style="color:#8600b3;padding-right:10px;">Not Interesting</span>
+                      <div class="rating-len">
+                          <input name="FE1-12" value="" style="display:none;" required>
+                          <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                              <circle class="FE1-12" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-12" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-12" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-12" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-12" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                          </svg>
+                      </div>
+                      <span class="rating-span rsr-iphone5" style="color:#4CAF50;padding:0 37px 0 10px;">Interesting</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="rating-layout ">
+              <div class="w3-text-blue q-title"><span class="tFront">(2). <span id="explore1">{{ explore[1] }}</span></span></div>
+              <div style="display:inline-block;">
+                  <div style="display:table;">
+                      <span class="rating-span" style="color:#8600b3;padding-right:10px;">Not relevant</span>
+                      <div class="rating-len" style="">
+                          <input name="FE1-21" value="" style="display:none;" required>
+                          <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                              <circle class="FE1-21" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-21" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-21" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-21" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-21" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                          </svg>
+                      </div>
+                      <span class="rating-span" style="color:#4CAF50;padding:0 33px 0 10px;">Relevant</span>
+                  </div>
+              </div>
+              <div style="display:inline-block;">
+                  <div style="display:table;">
+                      <span class="rating-span" style="color:#8600b3;padding-right:10px;">Not Interesting</span>
+                      <div class="rating-len">
+                          <input name="FE1-22" value="" style="display:none;" required>
+                          <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                              <circle class="FE1-22" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-22" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-22" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-22" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-22" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                          </svg>
+                      </div>
+                      <span class="rating-span" style="color:#4CAF50;padding:0 37px 0 10px;">Interesting</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="rating-layout">
+              <div class="w3-text-blue q-title"><span class="tFront">(3). <span id="explore2">{{ explore[2] }}</span></span></div>
+              <div style="display:inline-block;">
+                  <div style="display:table;">
+                      <span class="rating-span" style="color:#8600b3;padding-right:10px;">Not relevant</span>
+                      <div class="rating-len" style="">
+                          <input name="FE1-31" value="" style="display:none;" required>
+                          <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                              <circle class="FE1-31" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-31" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-31" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-31" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-31" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                          </svg>
+                      </div>
+                      <span class="rating-span" style="color:#4CAF50;padding:0 33px 0 10px;">Relevant</span>
+                  </div>
+              </div>
+              <div style="display:inline-block;">
+                  <div style="display:table;">
+                      <span class="rating-span" style="color:#8600b3;padding-right:10px;">Not Interesting</span>
+                      <div class="rating-len">
+                          <input name="FE1-32" value="" style="display:none;" required>
+                          <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                              <circle class="FE1-32" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-32" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-32" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-32" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE1-32" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                          </svg>
+                      </div>
+                      <span class="rating-span" style="color:#4CAF50;padding:0 37px 0 10px;">Interesting</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div id="fb3-q2" class="p-fb3">
+          <label class="w3-label w3-text-black">2. Please evaluate the association degree of following paths. E.g.
+              “keyboard-computer-internet-cell phone-texting-distractd driving” is a close association.</label><br>
+          <div class="rating-layout">
+              <div class="w3-text-blue q-title"><span class="tFront">(1). <span id="path0">{{ path[0] }}</span></span></div>
+              <div style="display:inline-block;">
+                  <div style="display:table;">
+                      <span class="rating-span fixI5-fb22" style="color:#8600b3;padding-right:10px;">Distant Association</span>
+                      <div class="rating-len fixI5-fb22" style="">
+                          <input name="FE2-1" value="" style="display:none;" required>
+                          <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                              <circle class="FE2-1" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE2-1" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE2-1" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE2-1" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE2-1" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                          </svg>
+                      </div>
+                      <span class="rating-span fixI5-fb22" style="color:#4CAF50;padding:0 17px 0 10px;">Close Association</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="rating-layout">
+              <div class="w3-text-blue q-title"><span class="tFront">(2). <span id="path1">{{ path[1] }}</span></span></div>
+              <div style="display:inline-block;">
+                  <div style="display:table;">
+                      <span class="rating-span fixI5-fb22" style="color:#8600b3;padding-right:10px;">Distant Association</span>
+                      <div class="rating-len fixI5-fb22" style="">
+                          <input name="FE2-2" value="" style="display:none;" required>
+                          <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                              <circle class="FE2-2" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE2-2" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE2-2" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE2-2" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE2-2" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                          </svg>
+                      </div>
+                      <span class="rating-span fixI5-fb22" style="color:#4CAF50;padding:0 17px 0 10px;">Close Association</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <p>
+          <label class="w3-label  w3-text-black">3. Do you think your network map is properly divided into groups ?</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="FE3" value="very properly" required><label>Very Properly</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="FE3" value="properly"><label>Properly</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="FE3" value="not properly"><label>Not Properly</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="FE3" value="no try"><label>I didn't try the function of cluster</label><br>
+        </p>
+
+        <div id="fb3-q4" class="p-fb3">
+          <label class="w3-label  w3-text-black">4. Are you inspired by the following path between clusters?</label><br>
+          <div class="rating-layout">
+              <div class="w3-text-blue q-title"><span id="cluster" class="tFront">{{ cluster[0] }}</span></div>
+              <div style="display:inline-block;">
+                  <div style="display:table;">
+                      <span class="rating-span" style="color:#8600b3;padding-right:10px;">Little Inspiration</span>
+                      <div class="rating-len" style="">
+                          <input name="FE4" value="" style="display:none;" required>
+                          <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                              <circle class="FE4" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE4" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE4" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE4" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              <circle class="FE4" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                          </svg>
+                      </div>
+                      <span class="rating-span" style="color:#4CAF50;padding-left:10px;">Much Inspiration</span>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="p-fb3">
+            <label class="w3-label w3-text-black">5. Did you try the feature "Minimum Steps"? If yes, please rate it.</label><br>
+            <input id="FE5_yes" class="w3-radio w3-margin-right" type="radio" name="FE5" value="yes" required><label>Yes</label><br>
+            <input class="w3-radio w3-margin-right" type="radio" name="FE5" value="no"><label>No</label><br>
+            <div id="FE5_rate" class="rating-layout" style="margin-top:10px;display:none;">
+                <div style="display:inline-block;">
+                      <div style="display:table;">
+                          <span class="rating-span" style="color:#8600b3;padding-right:10px;">Useless</span>
+                          <div class="rating-len" style="">
+                              <input name="FE5_input" value="null" style="display:none;" >
+                              <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                                  <circle class="FE5" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                                  <circle class="FE5" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                                  <circle class="FE5" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                                  <circle class="FE5" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                                  <circle class="FE5" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              </svg>
+                          </div>
+                          <span class="rating-span" style="color:#4CAF50;padding:0 7px 0 10px;">Usefull</span>
+                      </div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="p-fb3">
+            <label class="w3-label w3-text-black">6. Did you try to change the features "General -- Specific" or "Professional -- Basic"? If yes, please rate it.</label><br>
+            <input id="FE6_yes" class="w3-radio w3-margin-right" type="radio" name="FE6" value="yes" required><label>Yes</label><br>
+            <input class="w3-radio w3-margin-right" type="radio" name="FE6" value="no"><label>No</label><br>
+            <div id="FE6_rate" class="rating-layout" style="margin-top:10px;display:none;">
+                <div style="display:inline-block;">
+                      <div style="display:table;">
+                          <span class="rating-span" style="color:#8600b3;padding-right:10px;">Useless</span>
+                          <div class="rating-len" style="">
+                              <input name="FE6_input" value="null" style="display:none;">
+                              <svg viewBox="0 0 204 40" width="100%" height="100%" >
+                                  <circle class="FE6" value="1" r="16" cx="20"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                                  <circle class="FE6" value="2" r="13" cx="64"cy="20" stroke="#8600b3" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                                  <circle class="FE6" value="3" r="10" cx="102"cy="20" stroke="#cccccc" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                                  <circle class="FE6" value="4" r="13" cx="140"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                                  <circle class="FE6" value="5" r="16" cx="184"cy="20" stroke="#4CAF50" stroke-width="4" fill="white" style="cursor:pointer;"/>
+                              </svg>
+                          </div>
+                          <span class="rating-span" style="color:#4CAF50;padding:0 7px 0 10px;">Usefull</span>
+                      </div>
+                  </div>
+            </div>
+        </div>
+
+        <p>
+          <label class="w3-label  w3-text-black">7. Did you try all these features:Explore, Search path, Cluster and Search Path between clusters ?</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="FE7" value="yes"><label>Yes</label><br>
+          <input class="w3-radio w3-margin-right" type="radio" name="FE7" value="no" id="FE7_no"><label>No, partly</label><br>
+          <div id="FE7reason" style="display:none;">
+            <label class="w3-label">Please tick the reason:</label><br>
+            <input class="w3-check " type="checkbox" value="1" name="FE7-r"><label class="w3-validate">I don't understand this/these feature(s)</label><br>
+            <input class="w3-check " type="checkbox" value="2" name="FE7-r"><label class="w3-validate">I'm not interested in this/these feature(s)</label><br>
+            <input class="w3-check " type="checkbox" value="3" name="FE7-r"><label class="w3-validate">This/These is/are useless</label><br>
+            <input class="w3-check " type="checkbox" value="4" name="FE7-r"><label class="w3-validate">I just forgot to try</label>
+          </div>
+        </p>
+
+        <p>
+          <label class="w3-label ">8. Please comment if you have any opinion on WikiLink (Optional)</label><br>
+          <textarea name="FE8" rows="4"  style="width:100%;padding:10px;margin-top:10px;resize:none;box-sizing:border-box;"></textarea>
+        </p>
+
+        <p class="w3-center">
+        <button type="submit" class="w3-btn w3-blue w3-large">Submit</button>
+        </p>
+
+      <script>
+            $('button[type="submit"]').on('click',function(){
+                if ($('#FE5_rate').css('display') == 'block'){
+                    console.log('FE5_rate block')
+                    value_FE5 = $('#FE5_input').attr('value');
+                    $('#FE5_yes').attr('value', value_FE5);
+                };
+
+                if ($('#FE6_rate').css('display') == 'block'){
+                    console.log('FE6_rate block')
+                    value_FE6 = $('#FE6_input').attr('value');
+                    $('#FE6_yes').attr('value', value_FE6);
+                };
+
+                var required = $('[required]');
+                var error = false;
+                for(var i = 0; i <= (required.length - 1);i++)
+                {
+                    if(required[i].value == '') // tests that each required value does not equal blank, you could put in more stringent checks here if you wish.
+                    {
+                        error = true; // if any inputs fail validation then the error variable will be set to true;
+                    }
+                };
+                if(error) // if error is true;
+                {
+                    alert('Please answer all rating questions !')
+                    return false;  // stop the form from being submitted.
+                };
+            });
+      </script>
+
+      </form>
+
+    </div>
+  </body>
+</html>

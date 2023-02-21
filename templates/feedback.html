@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Feedback: WikiLink </title>
+  <link rel="shortcut icon" href="static/favicon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="static/feedback.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/w3.css">
+  <link rel="stylesheet" type="text/css" href="static/feedback.css">
+
+  <body>
+    <header class="w3-container w3-blue">
+      <h1> Feedback on WikiLink</h1>
+    </header>
+
+    <div id="form-border" class="" style="">
+
+      <form id="form-padding" class="w3-container w3-card-4 form-max" action="/feedback-2" method="POST">
+
+        <h3>Part I : Basic Information</h3>
+
+        <p>
+          <label class="w3-label">1. Your email address*</label>
+          <input class="w3-input" type="text" name="BI1" value="{{ email }}" required>
+        </p>
+
+        <p>
+          <label class="w3-label">2. Your social role</label><br>
+          <select class="w3-select" name="BI2" id="job" style="" required />
+            <option value="" disabled selected>Choose your social role</option>
+            <option value="academic">Academic professional</option>
+            <option value="student">Student</option>
+            <option value="technician">Industrial technician</option>
+            <option value="other">Others</option>
+          </select>
+        </p>
+
+        <p>
+          <label class="w3-label">3. Your current education level</label><br>
+          <select class="w3-select" name="BI3" id="degree" style="" required>
+            <option value="" disabled selected>Choose your education level</option>
+            <option value="bachelor">Bachlor/Undergraduate</option>
+            <option value="master">Master/Postgraduate</option>
+            <option value="doctor">Doctor/PhD student</option>
+          </select>
+        </p>
+
+        <p>
+          <label class="w3-label">4. Your academic background</label><br>
+          <select class="w3-select" name="BI4" id="subject" style="" required>
+            <option value="" disabled selected>Choose your subject</option>
+            <option value="art">Art</option>
+            <option value="business">Business</option>
+            <option value="design">Engineering-Design</option>
+            <option value="engineering">Engineering-others</option>
+            <option value="medicine">Medicine</option>
+            <option value="science">Natural science</option>
+            <option value="social">Social science</option>
+            <option value="other">Others</option>
+          </select>
+        </p>
+
+        <p>
+          <label class="w3-label">5. Tick the tools you have used:</label><br>
+          <input class="w3-check " type="checkbox" value="1" name="BI5"><label class="w3-validate">Google Map</label><br>
+          <input class="w3-check " type="checkbox" value="2" name="BI5"><label class="w3-validate">Gephi</label><br>
+          <input class="w3-check " type="checkbox" value="3" name="BI5"><label class="w3-validate">neo4j</label><br>
+          <input class="w3-check " type="checkbox" value="4" name="BI5"><label class="w3-validate">Yossarian</label><br>
+          <input id="BI5-OTHER" class="w3-check " type="checkbox" value="5" name="BI5"><label class="w3-validate">Other tool similar to WikiLink</label><br>
+          <input id="BI5-INPUT" class="w3-input" type="text" value="" placeholder="Please specify its name here" style="display:none;">
+        </p>
+
+        <p class="page-button" style="margin-top:25px;">
+        <button id="submit" type="submit" class="w3-btn w3-blue w3-large">Save & Next</button>
+        </p>
+
+        <script>
+          $('#submit').click(function(){
+            console.log('submit')
+            if ($('#BI5-INPUT').css('display') == 'block'){
+              var input = $('#BI5-INPUT').val();
+              input = '5+'+input;
+              $('#BI5-OTHER').attr('value', input)
+            }
+          });
+        </script>
+
+      </form>
+
+    </div>
+  </body>
+</html>
+

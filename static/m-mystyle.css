@@ -1,0 +1,373 @@
+svg#Mainback {
+      top:0; bottom:0; left:0; right:0;
+}
+
+html, body { margin:0; padding:0; overflow:hidden }
+
+/* search box design  */
+#mainSearchBox {
+  position:fixed;
+  left:10px;
+  right:10px;
+  top:5px;
+}
+
+input[name="keywords"]{
+  height:40px;
+  box-sizing:border-box;
+  border:2px solid #ccc;
+  border-radius:10px;
+  font-size: 18px;
+  padding:10px 70px 10px 12px;
+}
+
+input[name="search"]{
+  width:30px;
+  height:30px;
+  position:absolute;
+  right:5px;
+  top:5px;
+  border:2px;
+  background-image:url('/static/search.png');
+  background-color:white;
+  background-size:100%;
+  opacity:0.1;
+  cursor: pointer;
+}
+
+input[name="search"]:hover{
+  background-size:110%;
+}
+
+/* tooltip design for func-nav panel */
+.tooltip .tip-style{
+    visibility:hidden;
+    width:350px;
+    position:fixed;
+    left:10px;
+    top:143px;
+    white-space:normal;
+    padding:5px 20px;
+    font-size:14px;
+    color:red;
+    background-color:white;
+    text-align:left;
+}
+
+.tooltip:hover .tip-style{
+    visibility:visible;
+    -webkit-transition-delay: 0.5s; /* Chrome and Safari */
+    transition-delay: 0.5s;
+}
+
+/* the whole panel control  */
+.panel{
+  position:fixed;
+  left:10px;
+  right:10px;
+  display:none;
+}
+
+
+/*/////////////// the drawing of toggle switch //////////////////*/
+.t-global {
+    font-family:arial;
+    font-size:18px;
+    color:#2196F3;
+    font-weight: bold;
+    display:inline-block;
+}
+
+.t-global-toggle{
+    color:black;
+    font-weight:normal;
+}
+
+.t-local {
+    font-family:arial;
+    font-size:18px;
+    font-weight:normal;
+    display:inline-block;
+}
+
+.t-local-toggle{
+    color:#2196F3;
+    font-weight:bold;
+}
+
+
+label.switch {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 60px;
+}
+
+label.switch-cluster {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 20px;
+}
+
+label.switch input {display:none;}
+label.switch-cluster input {display:none;}
+
+div.slider, .slider-cluster {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+}
+
+div.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+}
+
+input[name="switch-1"]:checked + .slider {
+  background-color: #2196F3;
+}
+
+input[name="switch-2"]:checked + .slider {
+  background-color: #2196F3;
+}
+
+input[name="switch-3"]:checked + .slider {
+  background-color: #2196F3;
+}
+
+input[name="switch-1"]:checked + .slider:before {
+  transform: translateY(40px);
+}
+
+input[name="switch-2"]:checked + .slider:before {
+  transform: translateX(50px);
+}
+
+input[name="switch-3"]:checked + .slider:before {
+  transform: translateX(50px);
+}
+
+/* Rounded sliders */
+div.slider.round {
+  border-radius: 20px;
+}
+
+div.slider.round:before {
+  border-radius: 50%;
+}
+/* ///////////////////  end  ////////////////////////*/
+
+/* Min Hop Panel  */
+select.minhop{
+    width:60px;
+    height:26px;
+    font-size:16px;
+    padding-left:20px;
+}
+
+/* Line-panel text input box */
+input[name="endpoint"]{
+  width: 350px;
+  height:50px;
+  box-sizing:border-box;
+  border:2px solid #ccc;
+  border-radius:10px;
+  font-size: 20px;
+  padding:12px 70px 12px 12px;
+}
+
+/* cluster-panel search-icon */
+.cluster-searchicon{
+  opacity:0.3;
+  cursor:pointer;
+}
+
+.listTxt{
+    height: 35px;
+}
+
+/* cluster-panel text blink animation */
+.blink_text{
+    animation:1s blinker linear 10;
+    -webkit-animation:1s blinker linear 10;
+
+}
+
+@keyframes blinker {
+     0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+}
+
+/* info display panel */
+#info_panel{
+    position:fixed;
+    left:0px;
+    right:0px;
+    display:none;
+}
+.info_panel_height{
+    height:33vh;
+    bottom:0px;
+}
+.info_panel_down{
+    height:33vh;
+    bottom:calc(-33vh + 35px);
+}
+.info_panel_full{
+    height: calc(100vh - 115px);
+    bottom:0px;
+    background
+}
+/*.info_panel_full_safari{
+    height: calc(100vh - 113px);
+    bottom:0px;
+}*/
+.fullInfo{
+    background-image:url('/static/zoom_in.png');
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position:center;
+}
+
+.fullInfo_toggle{
+    background-image:url('/static/zoom_out.png');
+}
+
+.img-rotate{
+}
+.img-rotate-toggle{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.info-result{
+    position:absolute;
+    top:0;
+    width:100%;
+    height:40px;
+    display:inline-flex;
+    vertical-align:-30%;
+}
+
+.info-display{
+    background-color:white;
+    border-radius:3px;
+    position:absolute;
+    left:40px;
+    right:40px;
+    top:40px;
+    bottom:0;
+    overflow-y:scroll;
+    word-wrap:break-word;
+}
+
+#pleasewait{
+    top: 60% ;
+    left: 25% ;
+    position: absolute;
+    display: block;
+}
+
+div.row p.list{
+    width: 10%;
+    float: left;
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+div.row p.infoHead{
+    width: 90%;
+    float: left;
+    margin: 0;
+    font-size: 14px;
+    font-family:arial;
+    text-align: left;
+    /*line-height: 150%;*/
+}
+
+
+div.row p.infoDetail{
+    width: 90%;
+    clear: left;
+    float: right;
+    margin: 0;
+    font-size: 12px;
+    color : #839192;
+    font-family:arial;
+    text-align: left;
+    padding-top:5px;
+    /*line-height: 150%;*/
+}
+
+div.info-display div.row{
+    padding-top:10px;
+    padding-left:2px;
+    padding-bottom:10px;
+    clear: both;
+    border-bottom:2px solid #9ed1fa;
+    cursor:pointer;
+}
+
+.info-display .row.clicked{
+    border:2px solid #9ed1fa;
+    box-shadow:0px 2px 10px 0 #86c5f9,0px 2px 20px 0 #86c5f9;
+}
+
+/*.info-display .row:hover{
+    border:2px solid #9ed1fa;
+    box-shadow:0px 2px 10px 0 #86c5f9,0px 2px 20px 0 #86c5f9;
+
+}*/
+
+div.info-display div.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.page-button{
+    position:absolute;
+    top:40px;
+    bottom:0;
+    width:40px;
+    background-color:white;
+}
+
+.feedback{
+    position:absolute;
+    bottom:38px;
+    left:10px;
+    width:60px;
+
+}
+
+/* copy right declaration */
+.copyright{
+    position:absolute;
+    bottom:3px;
+    width:300px;
+    left:50%;
+    margin-left:-145px;
+    height:20px;
+    font-size:13px;
+    pointer-events:none;
+}
+
+@media only screen and (max-width: 350px) {
+    .iphone5_none {display:none;}
+}
+
+
+
